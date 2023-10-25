@@ -2,4 +2,4 @@
 count=$(find .  | wc -l)
 
 #priny the count
-echo $count
+echo $counts
