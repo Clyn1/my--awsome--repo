@@ -1,2 +1,5 @@
-count=$(find . -type f -o -type d | wc -l)
-echo "$count"
+#count regular files and directories in the current directories and subdirectories
+count=$(find .  | wc -l)
+
+#priny the count
+echo $count
