@@ -1,1 +1,2 @@
-find . -name "*.sh" -exec basename {} .sh \; | sort -r 
+count=$(find . -type f -o -type d | wc = -l)
+echo "$count"
