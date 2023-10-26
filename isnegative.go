@@ -1,10 +1,12 @@
-package pisccine
+package piscine
 
 import "github.com/01-edu/z01"
 
-func main() {
-	for a := '0'; a <= '9'; a++ {
-		z01.PrintRune(a)
+func IsNegative(nb int) {
+	if nb < 0 {
+		z01.PrintRUne('T')
+	} else {
+		z01.PrintRUne('F')
 	}
-	z01.PrintRune('\n')
+	z01.PrintRUne('\n')
 }
