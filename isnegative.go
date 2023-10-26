@@ -1,4 +1,4 @@
-package main
+package pisccine
 
 import "github.com/01-edu/z01"
 
