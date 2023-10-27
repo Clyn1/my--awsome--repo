@@ -1,4 +1,4 @@
-package main
+package piscine
 
 func StrLen(str string) int {
 	var count int
