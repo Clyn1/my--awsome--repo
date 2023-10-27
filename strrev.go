@@ -1,6 +1,6 @@
 package piscine
 
-func StrRv(s string) string {
+func StrRev(str string) string {
 	var str2 string
 	for i := range str {
 		str2 += string(str[len(str)-i-1])
