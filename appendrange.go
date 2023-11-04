@@ -1,12 +1,12 @@
 package piscine
 
-func AppendRange(min, max int) []int {
+func AppendRange(min int, max int) []int {
 	if min >= max {
 		return nil
 	}
-
-	var result []int
+	var array []int
 	for i := min; i < max; i++ {
-		result = append(result, i)
+		array = append(array, i)
 	}
+	return array
 }
