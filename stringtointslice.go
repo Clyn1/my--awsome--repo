@@ -1,7 +1,7 @@
 package piscine
 
 import (
-	"fmt"
+	"github.com/01-edu/z01"
 	"strconv"
 	"strings"
 )
@@ -21,14 +21,14 @@ func StringToIntSlice(input string) ([]int, error) {
 	return intSlice, nil
 }
 
-func main() {
+func (piscine) {
 	input := "1 2 3 4 5"
 	intSlice, err := StringToIntSlice(input)
 	if err != nil {
-		fmt.Println("Error:", err)
+		z01.PrintRune("Error:", err)
 		return
 	}
 
-	fmt.Println("Input String:", input)
-	fmt.Println("Converted Int Slice:", intSlice)
+	z01.PrintRune("Input String:", input)
+	z01.PrintRune("Converted Int Slice:", intSlice)
 }
