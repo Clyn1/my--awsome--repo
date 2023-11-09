@@ -1,4 +1,4 @@
-package main
+package piscine
 
 import (
 	"fmt"
@@ -17,6 +17,6 @@ func JumpOver(s string) string {
 	return result
 }
 
-func main() {
+func piscine() {
 	fmt.Println(JumpOver("Hello, World!"))
 }
