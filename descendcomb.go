@@ -3,10 +3,10 @@ package piscine
 import "github.com/01-edu/z01"
 
 func DescendComb() {
-	for i := '0'; i >= '9'; i-- {
-		for j := '0'; j >= '9'; j-- {
-			for k := '0'; k >= '9'; k-- {
-				for l := '0'; l >= '9'; l-- {
+	for i := '9'; i >= '0'; i-- {
+		for j := '9'; j >= '0'; j-- {
+			for k := '9'; k >= '0'; k-- {
+				for l := '9'; l >= '0'; l-- {
 					if i < k || (i == k && j <= l) {
 						continue
 					}
