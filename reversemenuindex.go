@@ -1,9 +1,5 @@
 package piscine
 
-import (
-	"fmt"
-)
-
 func ReverseMenuIndex(menu []string) []string {
 	length := len(menu)
 	reversedMenu := make([]string, length)
@@ -15,10 +11,10 @@ func ReverseMenuIndex(menu []string) []string {
 	return reversedMenu
 }
 
-func piscine() {
+func main() {
 	menu := []string{"DishA", "DishB", "DishC", "DishD"}
 	reversedMenu := ReverseMenuIndex(menu)
 
-	fmt.Println("Original Menu:", menu)
-	fmt.Println("Reversed Menu:", reversedMenu)
+	println("Original Menu:", menu)
+	println("Reversed Menu:", reversedMenu)
 }
