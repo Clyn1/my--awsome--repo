@@ -1,7 +1,7 @@
 package piscine
 
 import (
-	"fmt"
+	"github.com/01-edu/z01"
 )
 
 func JumpOver(s string) string {
@@ -18,5 +18,5 @@ func JumpOver(s string) string {
 }
 
 func piscine() {
-	fmt.Println(JumpOver("Hello, World!"))
+	z01.Println(JumpOver("Hello, World!"))
 }
