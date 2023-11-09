@@ -4,7 +4,7 @@ type food struct {
 	preptime int
 }
 
-func FoodDeliveryTime(oder string) int {
+func FoodDeliveryTime(order string) int {
 	menu := map[string]food{
 		"burger":  {preptime: 15},
 		"chips":   {preptime: 10},
