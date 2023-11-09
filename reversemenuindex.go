@@ -1,18 +1,11 @@
 package piscine
 
-import "fmt"
-
 func ReverseMenuIndex(menu []string) []string {
-	reversed := make([]string, len(menu))
-	for i := 0; i < len(reversed); i++ {
-		reversed[i] = menu[len(menu)-1-i]
-	}
-	return reversed
-}
+	reversedMenu := make([]string, len(menu))
 
-func main() {
-	menu := []string{"pizza", "pasta", "salad", "soup"}
-	fmt.Println("Original menu:", menu)
-	reversed := ReverseMenuIndex(menu)
-	fmt.Println("Reversed menu:", reversed)
+	for i := 0; i < len(menu); i++ {
+		reversedMenu[len(menu)-1-i] = menu[i]
+	}
+
+	return reversedMenu
 }
