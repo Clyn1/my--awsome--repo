@@ -1,36 +1,25 @@
 package piscine
 
-import (
-	"fmt"
-	"sort"
-)
+import "github.com/01-edu/z01"
+
+type ByLength []string
+
+func (s ByLength) Len() int           { return len(s) }
+func (s ByLength) Swap(i, j int)      { s[i], s[j] = s[j], s[i] }
+func (s ByLength) Less(i, j int) bool { return len(s[i]) < len(s[j]) }
 
 func ShoppingListSort(items []string) []string {
-	lengthMap := make(map[int][]string)
+	sort.Sort(ByLength(items))
 
-	for _, item := range items {
-		length := len(item)
-		lengthMap[length] = append(lengthMap[length], item)
-	}
-
-	var lengths []int
-	for length := range lengthMap {
-		lengths = append(lengths, length)
-	}
-	sort.Ints(lengths)
-
-	var result []string
-	for _, length := range lengths {
-		result = append(result, lengthMap[length]...)
-	}
-
-	return result
+	return items
 }
 
-func piscine() {
+func main() {
+
 	shoppingList := []string{"eggs", "bread", "milk", "apple", "cheese"}
 	sortedList := ShoppingListSort(shoppingList)
 
-	fmt.Println("Original shopping list:", shoppingList)
-	fmt.Println("Sorted shopping list:", sortedList)
+	for _, item := range sortedList {
+		z01.PrintRune(r rune())
+	}
 }
