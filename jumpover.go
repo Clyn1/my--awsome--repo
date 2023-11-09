@@ -18,5 +18,7 @@ func JumpOver(s string) string {
 }
 
 func piscine() {
-	z01.Println(JumpOver("Hello, World!"))
+	for _, i := range JumpOver("Hello, world") {
+		z01.PrintRune(i)
+	}
 }
