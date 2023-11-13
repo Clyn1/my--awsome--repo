@@ -7,6 +7,7 @@ type (
 		next *Node
 	}
 )
+
 type LinkedList struct {
 	head *Node
 }
