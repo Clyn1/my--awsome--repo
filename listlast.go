@@ -1,13 +1,25 @@
 package piscine
 
-func ListLast(l *List) interface{} {
-	if l.Head == nil {
+type Data interface{}
+
+type Node struct {
+	data Data
+	next *Node
+}
+
+type LinkedList struct {
+	head *Node
+}
+
+func ListLast(l LinkedList) Data {
+	if l.head == nil {
 		return nil
 	}
 
-	current := l.Head
-	for current.Next != nil {
-		current = current.Next
+	current := l.head
+	for current.next != nil {
+		current = current.next
 	}
-	return current.Data
+
+	return current.data
 }
