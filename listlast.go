@@ -9,6 +9,7 @@ type NodeL struct {
 
 type List struct {
 	Head *NodeL
+	Tail *NodeL
 }
 
 func ListLast(l *List) interface{} {
