@@ -1,5 +1,16 @@
 package piscine
 
+type Data interface{}
+
+type NodeL struct {
+	Data interface{}
+	Next *NodeL
+}
+
+type List struct {
+	Head *NodeL
+}
+
 func ListLast(l *List) interface{} {
 	if l.Head == nil {
 		return nil
