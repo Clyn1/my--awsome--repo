@@ -1,16 +1,8 @@
 package piscine
 
-type Data interface{}
-
-type Node struct {
-	data Data
-	next *Node
-}
-
-type LinkedList struct {
-	head *Node
-}
-
-func ListClear(l *LinkedList) {
-	l.head = nil
+func ListClear(l *List) {
+	if l.Head != nil || l.Tail != nil {
+		l.Head = nil
+		l.Tail = nil
+	}
 }
