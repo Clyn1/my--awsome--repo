@@ -1,7 +1,5 @@
 package piscine
 
-import "fmt"
-
 type Node struct {
 	data int
 	next *Node
@@ -24,27 +22,4 @@ func ListReverse(l *List) {
 	}
 
 	l.head = prev
-}
-
-func PrintList(l *List) {
-	current := l.head
-	for current != nil {
-		fmt.Printf("%d ", current.data)
-		current = current.next
-	}
-	fmt.Println()
-}
-
-func main() {
-	myList := &List{
-		head: &Node{data: 1, next: &Node{data: 2, next: &Node{data: 3, next: nil}}},
-	}
-
-	fmt.Println("Original List:")
-	PrintList(myList)
-
-	ListReverse(myList)
-
-	fmt.Println("Reversed List:")
-	PrintList(myList)
 }
