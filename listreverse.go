@@ -1,11 +1,12 @@
 package piscine
 
-func ListLast(l *List) *NodeL {
-	current := l.Head
-
-	for current != nil && current.Next != nil {
-		current = current.Next
+func ListReverse(l *List) {
+	if l.Head == nil {
+		return
 	}
-
-	return current
+	var prev *NodeL
+	for l.Head != nil {
+		l.Head.Next, prev, l.Head = prev, l.Head, l.Head.Next
+	}
+	l.Head = prev
 }
