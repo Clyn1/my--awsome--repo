@@ -20,15 +20,16 @@ func ListPushBack(l *List, data interface{}) {
 // ListMerge merges two lists by appending elements from l2 to l1
 func ListMerge(l1 *List, l2 *List) {
 	for l2.Head != nil {
-		// Type assertion to convert interface{} to int
-		data, ok := l2.Head.Data.(int)
-		if !ok {
-			// Handle the case where the assertion fails
-			// For now, we'll assume the data is always an int
-			panic("Data is not of type int")
+		// Type switch to check the type of data
+		switch data := l2.Head.Data.(type) {
+		case int:
+			ListPushBack(l1, data)
+		default:
+			// Handle the case where the data is not of type int
+			// For now, we'll ignore or log a message
+			// You may want to handle this case based on your requirements
+			// For example: log.Printf("Unsupported data type: %T", data)
 		}
 
-		ListPushBack(l1, data)
 		l2.Head = l2.Head.Next
 	}
-}
