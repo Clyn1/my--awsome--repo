@@ -33,3 +33,4 @@ func ListMerge(l1 *List, l2 *List) {
 
 		l2.Head = l2.Head.Next
 	}
+}
