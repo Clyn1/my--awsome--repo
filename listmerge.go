@@ -24,11 +24,14 @@ func ListMerge(l1 *List, l2 *List) {
 		switch data := l2.Head.Data.(type) {
 		case int:
 			ListPushBack(l1, data)
+		case []interface{}:
+			// Handle slices by appending their elements
+			for _, item := range data {
+				ListPushBack(l1, item)
+			}
 		default:
-			// Handle the case where the data is not of type int
-			// For now, we'll ignore or log a message
-			// You may want to handle this case based on your requirements
-			// For example: log.Printf("Unsupported data type: %T", data)
+			// Handle other types accordingly
+			ListPushBack(l1, data)
 		}
 
 		l2.Head = l2.Head.Next
