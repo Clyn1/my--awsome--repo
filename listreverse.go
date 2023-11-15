@@ -1,24 +1,11 @@
 package piscine
 
-type NodeL struct {
-	Data int
-	Next *NodeL
-}
-
-type List struct {
-	Head *NodeL
-}
-
-func ListReverse(l *List) {
-	var prev, next *NodeL
+func ListLast(l *List) *NodeL {
 	current := l.Head
 
-	for current != nil {
-		next = current.Next
-		current.Next = prev
-		prev = current
-		current = next
+	for current != nil && current.Next != nil {
+		current = current.Next
 	}
 
-	l.Head = prev
+	return current
 }
