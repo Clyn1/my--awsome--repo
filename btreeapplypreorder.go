@@ -1,7 +1,5 @@
 package piscine
 
-import "os"
-
 type TreeNode struct {
 	Value int
 	Left  *TreeNode
@@ -17,8 +15,10 @@ func ApplyPreorder(root *TreeNode, f func(int)) {
 }
 
 func printNode(val int) {
-	str := string(rune(val))
-	os.Stdout.WriteString(str)
+	print(val)
+}
+
+func print(val int) {
 }
 
 func main() {
