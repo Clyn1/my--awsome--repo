@@ -1,5 +1,10 @@
 package piscine
 
+import (
+	"fmt"
+	"strconv"
+)
+
 type TreeNode struct {
 	Value int
 	Left  *TreeNode
@@ -14,11 +19,9 @@ func ApplyPreorder(root *TreeNode, f func(int)) {
 	}
 }
 
-func printNode(val int) {
-	print(val)
-}
-
-func print(val int) {
+func printNode(val int, buffer *[]byte) {
+	strVal := strconv.Itoa(val)
+	*buffer = append(*buffer, strVal...)
 }
 
 func main() {
@@ -44,7 +47,11 @@ func main() {
 		},
 	}
 
+	var outputBuffer []byte
+
 	ApplyPreorder(root, func(val int) {
-		printNode(val)
+		printNode(val, &outputBuffer)
 	})
+
+	fmt.Println(string(outputBuffer))
 }
