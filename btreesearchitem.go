@@ -1,10 +1,14 @@
 package piscine
 
-func BTreeApplyPreorder(root *TreeNode, f func(...interface{}) (int, error)) {
+func BTreeSearchItem(root *TreeNode, elem string) *TreeNode {
 	if root == nil {
-		return
+		return nil
 	}
-	f(root.Data)
-	BTreeApplyPreorder(root.Left, f)
-	BTreeApplyPreorder(root.Right, f)
+	if elem < root.Data {
+		return BTreeSearchItem(root.Left, elem)
+	} else if elem > root.Data {
+		return BTreeSearchItem(root.Right, elem)
+	} else {
+		return root
+	}
 }
