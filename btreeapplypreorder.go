@@ -1,7 +1,7 @@
 package piscine
 
 import (
-	"github.com/01-edu/z01"
+	"fmt"
 )
 
 type TreeNode struct {
@@ -19,7 +19,7 @@ func ApplyPreorder(root *TreeNode, f func(int)) {
 }
 
 func printNode(val int) {
-	z01.PrintRune(rune(val))
+	fmt.Print(val)
 }
 
 func main() {
@@ -48,5 +48,5 @@ func main() {
 	ApplyPreorder(root, func(val int) {
 		printNode(val)
 	})
-	z01.PrintRune('\n')
+	fmt.Println()
 }
